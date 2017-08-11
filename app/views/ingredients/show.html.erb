@@ -1,0 +1,9 @@
+<h1>Details about <%= @ingredient.name %></h1>
+
+<p>Here are the Cocktail you are able to make:</p>
+
+<ul>
+  <% ingredient.cocktails.each do |cocktail| %>
+    <li><%= cocktail.name %></li>
+  <% end %>
+</ul>
