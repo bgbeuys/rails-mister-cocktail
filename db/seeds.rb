@@ -20,6 +20,9 @@
 
 # Cocktail.create(cocktails)
 
+["Mojito", "Old Fashioned", "Manhattan"].each do |drink_name|
+  Cocktail.create(name: drink_name)
+end
 
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
@@ -33,3 +36,12 @@ Ingredient.create(name: "Whiskey")
 Ingredient.create(name: "Tequila")
 Ingredient.create(name: "Sake")
 Ingredient.create(name: "strawberry")
+
+
+drink_dir = "app/assets/images/"
+
+
+# 20.times do
+#   n = [0,1,2,3].sample
+#   Cloudinary::Uploader.upload("#{drink_dir}drink_#{n}.jpg")
+# end

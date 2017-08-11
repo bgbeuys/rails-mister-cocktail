@@ -1,9 +1,47 @@
+<!-- <html>
+<head>
+<title>youR CockTail SlaVe</title>
+</head>
+<body>
 
 
 
-<h2>Find a cocktail you like</h2>
-<ol>
-<% @cocktails.each do |cocktail| %>
-  <li><%= cocktail.name %></li>
-<% end %>
-</ol>
+
+<div class="main">
+  <div class="wrap">
+    content and sidebar are swapped. They can be made to show in the order above with CSS
+    <div class="content"></div>
+    <div class="sidebar"></div>
+  </div>
+</div>
+
+ -->
+
+<div class="container">
+  <div class ="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+      <h2>Find a cocktail you like</h2>
+      <ol>
+      <% @cocktails.each do |cocktail| %>
+        <li><%= link_to cocktail.name, cocktail_path(cocktail)%></li>
+      <% end %>
+      </ol>
+
+      <%= link_to "Create new cocktail", new_cocktail_path %>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <footer>
+  <div class="wrap">
+    <div class="sidebar"></div>
+    <div class="content"></div>
+  </div>
+</footer>
+
+</body>
+</html>
+ -->
